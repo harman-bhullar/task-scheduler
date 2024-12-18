@@ -28,7 +28,7 @@ export default function Task() {
     };
 
     return (
-        <div>
+        <div className="container mt-4">
             <h2 className="mb-4">Task Scheduler</h2>
             <div className="row mb-4">
 
