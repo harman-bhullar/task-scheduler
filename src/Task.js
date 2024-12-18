@@ -41,7 +41,7 @@ export default function Task() {
                     <div  key={index} className="col-6 col-md-4 col-lg-3 mb-3">
                         <div className="card shadow-sm">
                             <div className="card-body text-center">
-                                <h6 className="card-title">Day</h6>
+                                <h6 className="card-title">Day {index + 1}</h6>
 
                                 <>
                                     <p></p>
