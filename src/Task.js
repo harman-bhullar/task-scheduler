@@ -65,17 +65,19 @@ export default function Task() {
                         <div className="card shadow-sm">
                             <div className="card-body text-center">
                                 <h6 className="card-title">Day {index + 1}</h6>
-
-
-                                <p>{task}</p>
-                                <button
-                                    className="btn btn-danger btn-sm"
-                                    onClick={deleteTask(index)}
-                                >
-                                    Delete Task
-                                </button>
-
-
+                                {task ? (
+                                    <>
+                                        <p>{task}</p>
+                                        <button
+                                            className="btn btn-danger btn-sm"
+                                            onClick={() => deleteTask(index)}
+                                        >
+                                            Delete Task
+                                        </button>
+                                    </>
+                                ) : (
+                                    <p className="text-muted">No Task</p>
+                                )}
                             </div>
                         </div>
                     </div>
