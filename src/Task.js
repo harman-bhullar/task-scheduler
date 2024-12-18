@@ -22,6 +22,11 @@ export default function Task() {
 
        
     };
+
+    const deleteTask = (index) => {
+
+    };
+
     return (
         <div>
             <h2 className="mb-4">Task Scheduler</h2>
@@ -65,7 +70,7 @@ export default function Task() {
                                 <p>{task}</p>
                                 <button
                                     className="btn btn-danger btn-sm"
-
+                                    onClick={deleteTask(index)}
                                 >
                                     Delete Task
                                 </button>
