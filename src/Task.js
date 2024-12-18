@@ -4,6 +4,10 @@ export default function Task() {
     const [task, setTask] = useState("");
     const [taskDate, setTaskDate] = useState("");
     const [tasks, setTasks] = useState(Array(30).fill(""));
+
+    const addTask = () => {
+       
+    };
     return (
         <div>
             <h2 className="mb-4">Task Scheduler</h2>
@@ -29,7 +33,7 @@ export default function Task() {
                     />
                 </div>
                 <div className="col-md-2">
-                    <button className="btn btn-primary w-100" >
+                    <button className="btn btn-primary w-100 " onClick={addTask}>
                         Add Task
                     </button>
                 </div>
