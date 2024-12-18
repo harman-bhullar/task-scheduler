@@ -10,6 +10,13 @@ export default function Task() {
             alert("Please enter both task and date.");
             return;
         }
+        const dayIndex = new Date(taskDate).getDate() ;
+        if (dayIndex >= 0 && dayIndex < 30) {
+            const updatedTasks = [...tasks];
+            updatedTasks[dayIndex] = task; 
+            setTasks(updatedTasks);
+        }
+
        
     };
     return (
