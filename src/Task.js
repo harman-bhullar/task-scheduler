@@ -8,6 +8,7 @@ export default function Task() {
         <div>
             <h2 className="mb-4">Task Scheduler</h2>
             <div className="row mb-4">
+
                 <div className="col-md-5">
                     <input
                         type="text"
@@ -36,28 +37,28 @@ export default function Task() {
 
             <h4 className="mb-3">30-Day Calendar</h4>
             <div className="row">
+                {tasks.map((task, index) => (
+                    <div  key={index} className="col-6 col-md-4 col-lg-3 mb-3">
+                        <div className="card shadow-sm">
+                            <div className="card-body text-center">
+                                <h6 className="card-title">Day</h6>
 
-                <div className="col-6 col-md-4 col-lg-3 mb-3">
-                    <div className="card shadow-sm">
-                        <div className="card-body text-center">
-                            <h6 className="card-title">Day</h6>
+                                <>
+                                    <p></p>
+                                    <button
+                                        className="btn btn-danger btn-sm"
 
-                            <>
-                                <p></p>
-                                <button
-                                    className="btn btn-danger btn-sm"
+                                    >
+                                        Delete Task
+                                    </button>
+                                </>
 
-                                >
-                                    Delete Task
-                                </button>
-                            </>
+                                <p className="text-muted">No Task</p>
 
-                            <p className="text-muted">No Task</p>
-
+                            </div>
                         </div>
                     </div>
-                </div>
-
+                ))}
             </div>
         </div>
     )
