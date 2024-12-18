@@ -16,6 +16,9 @@ export default function Task() {
             updatedTasks[dayIndex] = task; 
             setTasks(updatedTasks);
         }
+        
+        setTask(""); // Clear task input
+        setTaskDate("");
 
        
     };
