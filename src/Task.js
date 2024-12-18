@@ -20,7 +20,11 @@ export default function Task() {
 
                     />
                 </div>
-                
+                <div className="col-md-2">
+                    <button className="btn btn-primary w-100" >
+                        Add Task
+                    </button>
+                </div>
             </div>
         </div>
     )
