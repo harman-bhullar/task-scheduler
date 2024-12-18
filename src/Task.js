@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 export default function Task() {
     const [task, setTask] = useState("");
     const [taskDate, setTaskDate] = useState("");
+    const [tasks, setTasks] = useState(Array(30).fill(""));
     return (
         <div>
             <h2 className="mb-4">Task Scheduler</h2>
