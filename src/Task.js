@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Task() {
     const [task, setTask] = useState("");
@@ -31,6 +31,32 @@ export default function Task() {
                         Add Task
                     </button>
                 </div>
+            </div>
+
+            <h4 className="mb-3">30-Day Calendar</h4>
+            <div className="row">
+
+                <div className="col-6 col-md-4 col-lg-3 mb-3">
+                    <div className="card shadow-sm">
+                        <div className="card-body text-center">
+                            <h6 className="card-title">Day</h6>
+
+                            <>
+                                <p></p>
+                                <button
+                                    className="btn btn-danger btn-sm"
+
+                                >
+                                    Delete Task
+                                </button>
+                            </>
+
+                            <p className="text-muted">No Task</p>
+
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     )
