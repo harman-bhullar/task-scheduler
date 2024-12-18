@@ -6,6 +6,10 @@ export default function Task() {
     const [tasks, setTasks] = useState(Array(30).fill(""));
 
     const addTask = () => {
+        if (!task || !taskDate) {
+            alert("Please enter both task and date.");
+            return;
+        }
        
     };
     return (
