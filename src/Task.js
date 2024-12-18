@@ -13,6 +13,7 @@ export default function Task() {
                         className="form-control"
                         placeholder="Enter Task"
                         value={task}
+                        onChange={(e) => setTask(e.target.value)}
 
                     />
                 </div>
@@ -21,6 +22,7 @@ export default function Task() {
                         type="date"
                         className="form-control"
                         value={taskDate}
+                        onChange={(e) => setTaskDate(e.target.value)}
 
                     />
                 </div>
