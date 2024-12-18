@@ -17,14 +17,16 @@ export default function Task() {
             setTasks(updatedTasks);
         }
         
-        setTask(""); // Clear task input
+        setTask("");
         setTaskDate("");
 
        
     };
 
     const deleteTask = (index) => {
-
+        const updatedTasks = [...tasks];
+        updatedTasks[index] = ""; 
+        setTasks(updatedTasks);
     };
 
     return (
