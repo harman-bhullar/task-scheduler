@@ -1,6 +1,8 @@
 import React from 'react'
 
 export default function Task() {
+    const [task, setTask] = useState("");
+    const [taskDate, setTaskDate] = useState("");
     return (
         <div>
             <h2 className="mb-4">Task Scheduler</h2>
@@ -10,6 +12,7 @@ export default function Task() {
                         type="text"
                         className="form-control"
                         placeholder="Enter Task"
+                        value={task}
 
                     />
                 </div>
@@ -17,6 +20,7 @@ export default function Task() {
                     <input
                         type="date"
                         className="form-control"
+                        value={taskDate}
 
                     />
                 </div>
