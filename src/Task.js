@@ -1,36 +1,45 @@
 import React, { useState } from 'react'
 
 export default function Task() {
+    // Store task and the day selected
     const [task, setTask] = useState("");
     const [taskDate, setTaskDate] = useState("");
     const [tasks, setTasks] = useState(Array(30).fill(""));
 
+
+ // Add task to a specific day
     const addTask = () => {
         if (!task || !taskDate) {
             alert("Please enter both task and date.");
             return;
         }
-        const dayIndex = new Date(taskDate).getDate() ;
+
+         // Extract day of the month (1-31)
+        const dayIndex = new Date(taskDate).getDate() ; // Get day index (0-29)
+
+        
+        // Ensure that dayIndex is between 0 and 29 for the 30-day calendar
         if (dayIndex >= 0 && dayIndex < 30) {
             const updatedTasks = [...tasks];
-            updatedTasks[dayIndex] = task; 
+            updatedTasks[dayIndex] = task; // Assign task to the selected day
             setTasks(updatedTasks);
         }
         
-        setTask("");
-        setTaskDate("");
+        setTask(""); // Clear task input
+        setTaskDate(""); // Clear date input
 
        
     };
-
+ // Delete task from a specific day
     const deleteTask = (index) => {
         const updatedTasks = [...tasks];
-        updatedTasks[index] = ""; 
+        updatedTasks[index] = ""; // Remove task from the day
         setTasks(updatedTasks);
     };
 
     return (
         <div className="container mt-4">
+             {/* Input Section */}
             <h2 className="mb-4">Task Scheduler</h2>
             <div className="row mb-4">
 
@@ -60,6 +69,7 @@ export default function Task() {
                 </div>
             </div>
 
+             {/* Calendar Section */}
             <h4 className="mb-3">30-Day Calendar</h4>
             <div className="row">
                 {tasks.map((task, index) => (
